@@ -5,8 +5,8 @@ server.use(express.json()); // Use JSON parser middleware
 // Other middleware configurations...
 
 // Configure your routes
-const projectsRouter = require('./api/projects/projects-router');
-const actionsRouter = require('./api/actions/actions-router');
+const projectsRouter = require('/api/projects');
+const actionsRouter = require('/api/actions');
 
 server.use('/api/projects', projectsRouter);
 server.use('/api/actions', actionsRouter);
