@@ -1,15 +1,16 @@
 const express = require('express');
 const server = express();
 
+
 server.use(express.json()); // Use JSON parser middleware
 // Other middleware configurations...
 
 // Configure your routes
-const projectsRouter = require('/api/projects');
-const actionsRouter = require('/api/actions');
+const projectsRouter = require('./api/projects/projects-router');
+const actionsRouter = require('./api/actions/actions-router');
 
-server.use('/api/projects', projectsRouter);
-server.use('/api/actions', actionsRouter);
+server.use('./api/projects/projects-router', projectsRouter);
+server.use('./api/actions/actions-router', actionsRouter);
 
 
 const PORT = process.env.PORT || 9001;
