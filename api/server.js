@@ -3,9 +3,10 @@ const server = express();
 
 server.use(express.json());
 
-// Configure your routes
-const projectsRouter = require('/Users/walynsmith/web-sprint-challenge-build-a-web-api/api/projects/projects-router.js');
-const actionsRouter = require('/Users/walynsmith/web-sprint-challenge-build-a-web-api/api/actions/actions-router.js');
+
+const projectsRouter = require('./projects/projects-router');
+const actionsRouter = require('./actions/actions-router');
+
 
 server.use('/api/projects', projectsRouter);
 server.use('/api/actions', actionsRouter);
